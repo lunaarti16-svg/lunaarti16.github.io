@@ -204,7 +204,8 @@ function reviewInput() {
     for (var i = 0; i < formcontent.elements.length; i++) {
         var el = formcontent.elements[i];
         var datatype = el.type;
-        var name = el.name;
+        var label = document.querySelector(`label[for="${el.id}"]`);
+        var displayName = label ? label.innerText : el.name;
         var value = el.value;
 
         if (!name) continue;
@@ -212,7 +213,7 @@ function reviewInput() {
         switch (datatype) {
             case "checkbox":
                 if (el.checked) {
-                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td align='right'>" + displayName + "</td>";
                     formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
                 }
                 break;
