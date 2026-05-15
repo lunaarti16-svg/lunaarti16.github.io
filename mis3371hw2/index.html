@@ -307,13 +307,41 @@
 </tr>
 
 <tr>
-	<th colspan="4"> Patient Medical History</th>
+	<th colspan="4"> Patient's Medical History</th>
 </tr>		
 
 		 
 <!--symptomps-->
+<tr>
+    <td class="td1" align="right">
+		<label for="description">Any Current symptoms? <br> if so please explain:</label>
+	</td>
+    <td>
+        <textarea 
+			id="description" 
+			name="description" 
+			rows="3" 
+			cols="50" 
+			maxlength="150"
+			title="Explain your symptoms"
+			placeholder="Explain your symptoms"
+			></textarea>
+		<span id="description"></span>
+    </td>
+</tr>
+
+
 
 <!--alcohol-->
+<tr>
+	<td class="td1"><label for="gender">Patient Gender</label></td>
+	<td>
+		<input 
+			type="radio"
+			id="gender1"
+			name="gender1"
+			value="Male"
+			/> Male
 
 <!--allergies-->
 
@@ -335,13 +363,6 @@
     <td>
         <input type="checkbox" id="option1" value="Chicken Pox"> Chicken Pox
         <!-- Add more checkboxes -->
-    </td>
-</tr>
-
-<tr>
-    <td><label for="notes">Additional Notes:</label></td>
-    <td>
-        <textarea id="notes" name="notes" rows="4" cols="35" placeholder="Enter any additional medical history or concerns here..."></textarea>
     </td>
 </tr>
 
