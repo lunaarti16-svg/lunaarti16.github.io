@@ -156,7 +156,8 @@
         maxlength="30" 
 		title="Enter your address"
         required 
-        placeholder="125683 Avenue">
+        placeholder="125683 Avenue"
+			/>
     </td>
 </tr>
 
@@ -169,55 +170,27 @@
         id="addressl2" 
         maxlength="30" 
 		title="Enter your address"
-        placeholder="125683 Avenue">
+        placeholder="Apt123"
+			/>
     </td>
 </tr>
 
 <!--city-->
-
-<!--state-->
-
-<!--zipcode-->
-
-<!--emailaddress-->
-
-<!--phonenumber-->
-
-<!--symptomps-->
-
-<!--alcohol-->
-
-<!--allergies-->
-
-<!--pasthistory-->
-
-<!--range-->
-
-<!--userid-->
-
-<!--password-->
-
-<!--reenterpassword-->
-
-	
-
-			
-
-
-
-            <tr>
-		<td><label for="phone">Phone Number:</label></td>
-    <td>
-        <input type="text" 
-        name="phone" 
-        id="phone" 
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-        required 
-        title="Please enter phone number" 
-        placeholder="123-456-7890"/>
-    </td>
+<tr>
+	<td class="td1"><label for="city">City:</label></td>
+	<td>
+		<input type="text"
+			name="city"
+			id="city"
+			maxlength="30"
+			title="Enter your city"
+			required
+			placeholder="Houston"
+			/>
+	</td>
 </tr>
 
+<!--state-->
 <tr>
      <td class="td1"><label for="state">State:<Label></td>
      <td>
@@ -279,6 +252,63 @@
         </select>
        </td>
  </tr>
+
+				
+<!--zipcode-->
+<tr>
+	<td class="td1"><label for="zipcode">Zip Code:</label></td>
+	<td>
+		<input type="text"
+		name="zipcode"
+		id="zipcode"
+		maxlength="5"
+		pattern="[0-9]{5}
+		title="Enter your zipcode"
+		required
+		placeholder="77890"
+		/>
+	</td>
+</tr>
+
+<!--emailaddress-->
+
+<!--phonenumber-->
+
+<!--symptomps-->
+
+<!--alcohol-->
+
+<!--allergies-->
+
+<!--pasthistory-->
+
+<!--range-->
+
+<!--userid-->
+
+<!--password-->
+
+<!--reenterpassword-->
+
+	
+
+			
+
+
+
+            <tr>
+		<td><label for="phone">Phone Number:</label></td>
+    <td>
+        <input type="text" 
+        name="phone" 
+        id="phone" 
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+        required 
+        title="Please enter phone number" 
+        placeholder="123-456-7890"/>
+    </td>
+</tr>
+
 
 <tr>
     <td><label for="history">Have you ever had:</label></td>
