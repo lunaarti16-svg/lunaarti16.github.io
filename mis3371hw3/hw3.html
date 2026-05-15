@@ -210,7 +210,10 @@ Description:hw2 html
 			title="Enter your city"
 			required
 			placeholder="Houston"
+			onblur="validateCity()"
 			/>
+			<br>
+			<span class="error" id="citycheck"></span>
 	</td>
 </tr>
 
@@ -514,6 +517,7 @@ Description:hw2 html
             <input type="submit" name="submit" id="submit">
             <input type="reset" name="reset" id="reset">
 			<input type="button" name="Review" id="review" value="Review" onclick="reviewInput()">
+			<input type="button" name="Validate" id="valiate" value="Validate" onclick="validateAll()">
         </center>
     </td>
 </tr>
@@ -543,6 +547,13 @@ Description:hw2 html
 </footer>
          
 <script src="hw3.js"></script>
+
+	<div id="warnbox">
+    <div id="warncontent">
+        <h4>Be sure to fill out all required fields. </h4>
+        <button id="closewarn">OK</button>
+    </div>
+</div>
 	 </body>
 </html>
 
