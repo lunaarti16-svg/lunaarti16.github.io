@@ -143,7 +143,36 @@ function validateUserid() {
     }
 }
 
-                                           
+function validatePassword() {
+    const pass = document.getElementById("password").value;
+    const username = document.getElementById("userid").value;
+
+    const errorMessage = [];
+
+    if (!password.match(/[A-Z]/)) {
+        errorMessage.push("Enter one uppercase letter");
+    }
+    if (!password.match(/[a-z]/)) {
+        errorMessage.push("Enter one lowercase letter");
+    }
+   
+    if (!password.match(/[0-9]/)) {
+        errorMessage.push("Enter one Number");
+    }
+    
+    if (!password.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+        errorMessage.push("Enter one special character");
+    }
+    
+    if (password == userid|| password.includes(userid)) {
+        errorMessage.push("Password cannot have userid");
+    }
+   
+    const errorContainer = document.querySelector(".passwordmessage");
+    errorContainer.innerHTML = errorMessage
+    .map(msg => `<span>${msg}</span><br>`)
+    .join("");
+}                                           
 
 
 
