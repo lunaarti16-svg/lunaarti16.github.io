@@ -20,7 +20,7 @@ slider.oninput = function () {
 };
 
 function validateDob() {
-    dob = document.getElementById("dob");
+    const dob = document.getElementById("dob");
     let date = new Date(dob.value);
     let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
 
