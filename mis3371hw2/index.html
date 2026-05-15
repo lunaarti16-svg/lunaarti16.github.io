@@ -49,9 +49,11 @@ Description:hw2 html
     <td>
         <input type="text" 
         name="firstname" 
-        id="firstname" 
+        id="firstname"
+		minlength="1"
         maxlength="30" 
-        title="Enter your first name" 
+        title="Letter, apostrophes, and dashes only"
+    	pattern="[a-zA-Z']{1,30}"
         required 
         placeholder="John"
 		/>
@@ -66,7 +68,8 @@ Description:hw2 html
         id="midinitial" 
         maxlength="1"
 		size="1"
-        title="Enter your middle inital" 
+		title="Letters only"
+        pattern="[a-zA-Z']{0,1}"	
         placeholder="M"
 		/>
     </td>
@@ -76,9 +79,11 @@ Description:hw2 html
     <td>
         <input type="text" 
         name="lastname" 
-        id="lastname" 
+        id="lastname"
+		minlength="1"
         maxlength="30" 
-        title="Enter your last name" 
+        title="Letter, apostrophes, and dashes only"
+		pattern="[a-zA-Z']{1,30}
         required 
         placeholder="Ortiz"
 		/>
@@ -92,6 +97,10 @@ Description:hw2 html
         <input type="date" 
         id="dob" 
         name="dob"
+		onblur="validateDob()"
+    	required
+		/>
+<span class="error" id="dobcheck"></span>	
 			/>
     </td>
 </tr>	
@@ -105,7 +114,7 @@ Description:hw2 html
         id="ssn" 
         maxlength="11"
 		minlength="11"
-        title="Enter your SSN" 
+        title="Numbers only" 
         required 
         placeholder="123-12-5678"
 		/>
@@ -153,12 +162,15 @@ Description:hw2 html
     <td>
         <input type="text" 
         name="addressl1" 
-        id="addressl1" 
+        id="addressl1"
+		minlength="2"
         maxlength="30" 
 		title="Enter your address"
         required 
         placeholder="125683 Avenue"
+		onblur="validateAddress1()"	
 			/>
+		<span class="error" id="address1check"></span>
     </td>
 </tr>
 
@@ -183,6 +195,7 @@ Description:hw2 html
 		<input type="text"
 			name="city"
 			id="city"
+			minlength="2"
 			maxlength="30"
 			title="Enter your city"
 			required
