@@ -24,13 +24,10 @@ form {
     flex-grow: 1;
 }
 h1, h2 {
-    text-align: center;
-    font-family: Choose a font you want;
     font-weight: bold;
     flex-grow: 1;
 }
 main {
-    text-align: center;
     font-family: times new roman;
     font-weight: normal;
     flex-grow: 1;
