@@ -319,6 +319,18 @@ function validateLastname() {
 }
 }
 
+function validateCity() {
+    city = document.getElementById("city").value.trim();
+
+    if (!city) {
+        document.getElementById("citycheck").innerHTML = "City is required";
+        return false;
+    } else {
+        document.getElementById("citycheck").innerHTML = "";
+        return true;
+    }
+}
+
 
 
 
