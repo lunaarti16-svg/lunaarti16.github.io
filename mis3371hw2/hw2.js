@@ -215,12 +215,12 @@ function reviewInput() {
 
         switch (datatype) {
 
-            case "checkbox":
-                if (el.checked) {
-                    formoutput += "<tr><td align='right'>" + displayName + "</td>";
-                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
-                }
-                break;
+           case "checkbox":
+    if (el.checked) {
+        formoutput += "<tr><td align='right'>" + displayName + "</td>";
+        formoutput += "<td class='outputdata'>" + el.value + "</td></tr>";
+    }
+    break;
 
             case "radio":
                 if (el.checked) {
