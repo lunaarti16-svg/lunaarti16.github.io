@@ -191,7 +191,7 @@ function rePassword() {
 
 function reviewInput() {
     var formcontent = document.getElementById("signup");
-    var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
+    var formoutput = "<table class='output'><tr><th colspan='2'>Review all of your information:</th></tr>";
 
     for (var i = 0; i < formcontent.elements.length; i++) {
         var el = formcontent.elements[i];
@@ -199,7 +199,6 @@ function reviewInput() {
         var name = el.name;
         var value = el.value;
 
-        // skip elements with no name
         if (!name) continue;
 
         switch (datatype) {
@@ -218,7 +217,6 @@ function reviewInput() {
                 break;
 
             case "range":
-                // Only show the slider if the user moved it off the default (0)
                 if (value !== "0") {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
@@ -228,7 +226,7 @@ function reviewInput() {
             case "button":
             case "submit":
             case "reset":
-                // skip
+
                 break;
 
             default:
