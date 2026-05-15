@@ -15,4 +15,23 @@ let slider = document.getElementById("range");
 let output = document.getElementById("rangepain");
 output.innerHTML = slider.value;
 
-slider.oninput = function () {output.innerHTML = this.value;};
+function validateDob() {
+    dob = document.getElementById("dob");
+    let date = new Date(dob.value);
+    let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
+
+    if (date > new Date()) {
+        document.getElementById("dobcheck").innerHTML = 
+        "Date cannot be in the future";
+        dob.value = "";
+        return false;
+    } else if (date < new Date(maxDate)) {
+        document.getElementById("dobcheck").innerHTML = 
+        "Date cannot be more than 120 years ago";
+        dob.value = "";
+        return false;
+    } else {
+        document.getElementById("dobcheck").innerHTML = "";
+        return true;
+    }
+}
