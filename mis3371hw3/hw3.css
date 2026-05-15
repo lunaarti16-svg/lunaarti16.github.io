@@ -74,7 +74,50 @@ td.outputdata {
     border-spacing: 3px;
 }
 
+#warnbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: transparent;
+}
 
+#warncontent {
+ background-color: rgb(129, 140, 147);
+ border-radius: 10px;
+ width:250px;
+ height: 250px;
+ margin: auto;
+ text-align: center;
+ margin-top: 25%;
+ padding: 25px;
+}
+
+#closewarn {
+    background-color: rgb(200, 200, 200);
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: hold;
+    height: 15px;
+    width: 90px;
+    border-radius: 50px;
+    margin-top: 25px;
+    color: rgb(0, 0, 0);
+    border-color: rgb(191, 191, 191); 
+}
+
+#warncontent h4 {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    text-align: center;
+}
 
 
 
