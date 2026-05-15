@@ -97,10 +97,50 @@ if (phone.length != 10 {
     return false;
 }
     const formattePhone =
-        phone slice(0,3) +"-"+ phone.slice(3,6)  +"-"+ phone slice(6,10)
+        phone slice(0,3) +"-"+ phone.slice(3,6)  +"-"+ phone.slice(6,10)
         phoneInput.value = formattedPhone;
     document.getElementById("phonenumbercheck").innerHTML ="";
     return true;
+}
+
+function validateUserid() {
+    userid = document.getElementById("userid").value;
+
+    
+    userid = userid.toLowerCase();
+    document.getElementById("userid").value = userid;
+
+    if (userid.length == 0) {
+        document.getElementById("useridcheck").innerHTML = 
+        "User ID is required";
+        return false;
+    }
+
+    if (!isNaN(userid.charAt(0))) {
+        document.getElementById("useridcheck").innerHTML = 
+        "User ID cannot begin with a number";
+        return false;
+    }
+
+    let regex = /^[a-zA-Z0-9_-]+$/;
+    if (!regex.test(userid)) {
+        document.getElementById("useridcheck").innerHTML = 
+        "User ID can have only have letters, underscore,numbers (as long as the first character is not a number), and dashes ;
+        return false;
+        
+    } else if (userid.length < 5) {
+        document.getElementById("useridcheck").innerHTML = 
+        "User ID has to be at least 5 characters";
+        return false;
+        
+    } else if (userid.length > 30) {
+        document.getElementById("useridcheck").innerHTML = 
+        "User ID cannot be more than 30 characters";
+        return false;
+    } else {
+        document.getElementById("useridcheck").innerHTML = "";
+        return true;
+    }
 }
 
                                            
