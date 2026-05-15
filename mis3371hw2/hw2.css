@@ -13,7 +13,7 @@ header {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb (135, 206, 235);
+    background-color: rgb(135, 206,235);
     align-items: center;
     margin: 0;
     height: 100%;
