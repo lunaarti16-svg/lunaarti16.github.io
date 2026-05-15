@@ -89,9 +89,9 @@ function validateEmailaddress() {
 
 function validatePhonenumber() {
     const phoneInput = document.getElementById("phonenumber")
-    const phone = phoneInput.value.replace(/\g);
+    const phone = phoneInput.value.replace(/\D/g, "");
 
-if (phone.length != 10 {
+if (phone.length != 10) {
     document.getElementById("phonenumbercheck").innerHTML =
         "Phone number is required"
     return false;
@@ -144,8 +144,8 @@ function validateUserid() {
 }
 
 function validatePassword() {
-    const pass = document.getElementById("password").value;
-    const username = document.getElementById("userid").value;
+    const password = document.getElementById("password").value;
+    const userid = document.getElementById("userid").value;
 
     const errorMessage = [];
 
@@ -178,7 +178,7 @@ function rePassword() {
     password = document.getElementById("password").value;
     repassword = document.getElementById("repassword").value;
 
-    if (password1 !== password2) {
+    if (password !== repassword) {
         document.getElementById("repasswordcheck").innerHTML = 
         "Passwords DON'T MATCH!!";
         return false;
