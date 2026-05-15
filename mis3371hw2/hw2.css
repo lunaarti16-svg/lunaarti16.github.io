@@ -4,7 +4,7 @@ Author: Arti Luna
 Date created: 03/27/2026
 Date last edited: 03/27/2026
 Version: 1.0
-Description:hw2 js
+Description:hw2 css
 */
 header {
     width: 100%;
@@ -14,10 +14,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: Choose the color you want;
+    background-color: (RGB: 15, 191, 62);
     margin: 0;
     height: 100%;
-    min-height: 100vh; /* page is height of the viewport */
+    min-height: 100vh;
+    max-height: 100%;
 }
 form {
     flex-grow: 1;
@@ -30,10 +31,17 @@ h1, h2 {
 }
 main {
     text-align: center;
-    font-family: sans-serif or any font you want;
+    font-family: times new roman;
     font-weight: normal;
     flex-grow: 1;
 }
 .image {
     text-align: left;
 }
+
+.td1 {
+    text-align: right;
+}
+
+ 
+    
