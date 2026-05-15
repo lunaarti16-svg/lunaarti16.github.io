@@ -250,7 +250,6 @@ function reviewInput() {
     formoutput += "</table>";
     document.getElementById("showInput").innerHTML = formoutput;
 }
-}
 
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
