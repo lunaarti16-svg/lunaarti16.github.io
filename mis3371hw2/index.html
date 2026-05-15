@@ -168,9 +168,7 @@ Description:hw2 html
 		title="Enter your address"
         required 
         placeholder="125683 Avenue"
-		onblur="validateAddress1()"	
 			/>
-		<span class="error" id="address1check"></span>
     </td>
 </tr>
 
@@ -180,13 +178,12 @@ Description:hw2 html
     <td>
         <input type="text" 
         name="addressl2" 
-        id="addressl2" 
+        id="addressl2"
+		minlength="2"
         maxlength="30" 
 		title="Enter your address"
-        placeholder="Apt123"
-		onblur="validateAddress2()"		
+        placeholder="Apt123"	
 			/>
-		<span class="error" id="address2check"></span>
     </td>
 </tr>
 
