@@ -331,8 +331,64 @@ function validateCity() {
     }
 }
 
+function showWarn() {
+    var warnBox = document.getElementById("warnbox");
+    var closeWarn = document.getElementById("closewarn");
 
+    alertBox.style.display = "block";
+    closeWarn.onclick = function() {
+        warnBox.style.display = "none";
+    };
+}
 
+function validateAll() {
+    let valid = true;
+
+    if (!validateFirstname()) {
+        valid = false;
+    }
+    if (!validateMidinitial()) {
+        valid = false;
+    }
+    if (!validateLastname()) {
+        valid = false;
+    }
+    if (!validateDob()) {
+        valid = false;
+    }
+    if (!validateSsn()) {
+        valid = false;
+    }
+    if (!validateAddress1()) {
+        valid = false;
+    }
+    if (!validateCity()) {
+        valid = false;
+    }
+    if (!validateZipcode()) {
+        valid = false;
+    }
+    if (!validateEmailaddress()) {
+        valid = false;
+    }
+    if (!validatePhonenumber()) {
+        valid = false;
+    }
+    if (!validateUserid()) {
+        valid = false;
+    }
+    if (!validatePassword()) {
+        valid = false;
+    }
+    if (!rePassword()) {
+        valid = false;
+    }
+     if (valid) {
+         document.getElementById("submit").disabled = false;
+     } else{
+        showWarn();
+     }
+ }
 
 
 
