@@ -184,7 +184,9 @@ Description:hw2 html
         maxlength="30" 
 		title="Enter your address"
         placeholder="Apt123"
+		onblur="validateAddress2()"		
 			/>
+		<span class="error" id="address2check"></span>
     </td>
 </tr>
 
@@ -310,9 +312,12 @@ Description:hw2 html
         id="phonenumber" 
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
         title="Enter your phone number" 
-		required	
+		required
+		maxlength="30"
         placeholder="123-456-8654"
+		onblur="validatePhonenumber()"
 			/>
+		<span class="error" id="Phonenumbercheck"></span>
     </td>
 </tr>		 
 
