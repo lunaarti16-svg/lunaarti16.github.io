@@ -87,6 +87,23 @@ function validateEmailaddress() {
     }
 }
 
+function validatePhonenumber() {
+    const phoneInput = document.getElementById("phonenumber")
+    const phone = phoneInput.value.replace(/\g);
+
+if (phone.length != 10 {
+    document.getElementById("phonenumbercheck").innerHTML =
+        "Phone number is required"
+    return false;
+}
+    const formattePhone =
+        phone slice(0,3) +"-"+ phone.slice(3,6)  +"-"+ phone slice(6,10)
+        phoneInput.value = formattedPhone;
+    document.getElementById("phonenumbercheck").innerHTML ="";
+    return true;
+}
+
+                                           
 
 
 
