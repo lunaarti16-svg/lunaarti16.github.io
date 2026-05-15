@@ -55,8 +55,11 @@ Description:hw2 html
         title="Letter, apostrophes, and dashes only"
     	pattern="[a-zA-Z']{1,30}"
         required 
+		onblur="validateFirstname()"
         placeholder="John"
 		/>
+		<br>
+		<span class="error" id="firstnamecheck"></span>
     </td>
 </tr>
 
@@ -69,9 +72,12 @@ Description:hw2 html
         maxlength="1"
 		size="1"
 		title="Letters only"
-        pattern="[a-zA-Z']{0,1}"	
+        pattern="[a-zA-Z']{0,1}"
+		onblur="validateMidinitial()"
         placeholder="M"
 		/>
+		<br>
+		<span class="error" id="midinitialcheck"></span>
     </td>
 </tr>
 <tr>
@@ -86,7 +92,10 @@ Description:hw2 html
 		pattern="[a-zA-Z']{1,30}"
         required 
         placeholder="Ortiz"
+		onblur="validateLastname()"
 		/>
+		<br>
+		<span class="error" id="lastnamecheck"></span>
     </td>
 </tr>
 
