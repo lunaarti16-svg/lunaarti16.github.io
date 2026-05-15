@@ -298,7 +298,10 @@ Description:hw2 html
 			title="Enter your email address"
 			required
 			placeholder="abcdeg@gmail.com"
+			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
+			onblur="validateEmailaddress()"
 			/>
+		<span class="error" id="emailaddresscheck"></span>
 	</td>
 	
 </tr>
