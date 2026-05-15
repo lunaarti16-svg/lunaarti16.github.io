@@ -40,5 +40,42 @@ main {
     text-align: right;
 }
 
- 
+.error {
+    color: rgb(189, 44, 0);
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal
+}
+
+.passwordmessage {
+    text-align: right;
+    color: rgb(189, 44, 0);
+    position: relative;
+
+}
+
+#review {
+ margin-top: 10px;
+}
+
+table.output,
+tr.output,
+td.output {
+    width: 450px;
+    background-color: rgb(110, 84, 148);
+    padding: 15px;
+    color: black
+}
+    
+td.outputdata {
+    width: 450px;
+    background-color: rgb(137, 87, 229);
+    padding: 15px;
+    border-spacing: 3px;
+}
+
+
+
+
+
     
