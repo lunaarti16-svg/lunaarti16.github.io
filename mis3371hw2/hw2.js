@@ -15,6 +15,10 @@ let slider = document.getElementById("range");
 let output = document.getElementById("rangepain");
 output.innerHTML = slider.value;
 
+slider.oninput = function () {
+    output.innerHTML = this.value;
+};
+
 function validateDob() {
     dob = document.getElementById("dob");
     let date = new Date(dob.value);
