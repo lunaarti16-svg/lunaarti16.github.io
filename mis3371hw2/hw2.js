@@ -35,3 +35,34 @@ function validateDob() {
         return true;
     }
 }
+function validateSsn() {
+    const ssn = document.getElementById("ssn").value;
+    const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+
+    if (!ssnR.test(ssn)) {
+        document.getElementById("ssncheck").innerHTML = 
+        "Enter a valid SSN";
+        return false;
+    } else {
+        document.getElementById("ssncheck").innerHTML = "";
+        return true;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
