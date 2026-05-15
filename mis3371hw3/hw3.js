@@ -254,3 +254,81 @@ function reviewInput() {
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
 }
+
+
+function validateFirstname() {
+    firstname = document.getElementById("firstname").value.trim();
+    var namePattern = /^[a-zA-Z'-]+$/;
+    if (firstname == "") {
+        document.getElementById("firstnamecheck").innerHTML = "First name is required"
+        return false;
+    } else if (firstname != "") {
+        if (!firstname.match(namePattern)) {
+        document.getElementById("firstnamecheck").innerHTML = "Letters, apostrophes and dashes only.";
+        return false;
+    } else if (firstname.length < 2) {
+        document.getElementById("firstnamecheck").innerHTML = "First name not less than 2 characters.";
+        return false;
+    } else if (firstname.length > 30) {
+        document.getElementById("firstnamecheck").innerHTML = "First name not more than 30 characters.";
+        return false;
+    } else {
+        document.getElementById("firstnamecheck").innerHTML = "";
+        return true;
+    }
+}
+}
+
+function validateMidninitial() {
+    midinitial = document.getElementById("midinitial").value;
+    var namePattern = /^[A-Z]+$/;
+
+    midinitial = mini.toUpperCase();
+    document.getElementById("mini").value = mini;
+
+    if (!midinitial.match(namePattern)) {
+        document.getElementById("midinitialcheck").innerHTML = 
+        "Middle initial single uppercase letter required";
+        return false;
+    } else {
+        document.getElementById("midinitialcheck").innerHTML = "";
+        return true;
+    }
+}
+
+function validateLastname() {
+    lastname = document.getElementById("lastname").value.trim();
+    var namePattern = /^[a-zA-Z'-]+$/;
+    if (lastname == "") {
+        document.getElementById("lastnamecheck").innerHTML = "Last name field is required"
+        return false;
+    } else if (lastname != "") {
+        if (!lastname.match(namePattern)) {
+        document.getElementById("lastnamecheck).innerHTML = "Letters, apostrophes and dashes only.";
+        return false;
+    } else if (lastname.length < 2) {
+        document.getElementById("lastnamecheck").innerHTML = "Last name not less than 2 characters.";
+        return false;
+    } else if (lastname.length > 30) {
+        document.getElementById("lastnamecheck").innerHTML = "Last name not more than 30 characters.";
+        return false;
+    } else {
+        document.getElementById("lastnamecheck").innerHTML = "";
+        return true;
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
