@@ -125,7 +125,7 @@ function validateUserid() {
     let regex = /^[a-zA-Z0-9_-]+$/;
     if (!regex.test(userid)) {
         document.getElementById("useridcheck").innerHTML = 
-        "User ID can have only have letters, underscore,numbers (as long as the first character is not a number), and dashes ;
+        "User ID can only have letters, underscores, numbers, and dashes";
         return false;
         
     } else if (userid.length < 5) {
