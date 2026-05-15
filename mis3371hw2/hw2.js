@@ -54,7 +54,7 @@ function validateZipcode() {
     let zip = zipInput.value.replace(/[^\d-]/g, "");
 
     if (!zip) {
-        document.getElementById("zcodecheck").innerHTML = 
+        document.getElementById("zipcodecheck").innerHTML = 
         "Zipcode is required";
         return false;
     }
