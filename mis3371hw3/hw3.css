@@ -1,1 +1,81 @@
+/*
+Program name: lunafamilyclinic
+Author: Arti Luna
+Date created: 03/27/2026
+Date last edited: 03/27/2026
+Version: 1.0
+Description:hw2 css
+*/
+header {
+    width: 100%;
+    background-color:rgb(158,236,255);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(135, 206,235);
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+}
+form {
+    flex-grow: 1;
+}
+h1, h2 {
+    font-weight: bold;
+    flex-grow: 1;
+}
+main {
+    font-family:"Times New Roman", Times, serif;
+    font-weight: normal;
+    flex-grow: 1;
+}
+.image {
+    text-align: left;
+}
 
+.td1 {
+    text-align: right;
+}
+
+.error {
+    color: rgb(189, 44, 0);
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal
+}
+
+.passwordmessage {
+    text-align: right;
+    color: rgb(189, 44, 0);
+    position: relative;
+
+}
+
+#review {
+ margin-top: 10px;
+}
+
+table.output,
+tr.output,
+td.output {
+    width: 450px;
+    background-color: rgb(110, 84, 148);
+    padding: 15px;
+    color: black
+}
+    
+td.outputdata {
+    width: 450px;
+    background-color: rgb(137, 87, 229);
+    padding: 15px;
+    border-spacing: 3px;
+}
+
+
+
+
+
+    
