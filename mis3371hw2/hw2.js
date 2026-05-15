@@ -241,7 +241,9 @@ function reviewInput() {
     document.getElementById("showInput").innerHTML = formoutput;
 }
 
-
+function removeReview() {
+    document.getElementById("showInput").innerHTML = "";
+}
 
 
 
