@@ -28,7 +28,7 @@ h1, h2 {
     flex-grow: 1;
 }
 main {
-    font-family: times new roman;
+    font-family:"Times New Roman", Times, serif;
     font-weight: normal;
     flex-grow: 1;
 }
