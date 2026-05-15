@@ -274,12 +274,15 @@ Description:hw2 html
 		<input type="text"
 		name="zipcode"
 		id="zipcode"
-		maxlength="5"
-		pattern="[0-9]{5}"
+		minlength="5"
+		maxlength="10"
+		pattern="^\d{5}(-\d{4})?$"
 		title="Enter your zipcode"
 		required
 		placeholder="77890"
+		onblur="validateZipcode()"
 		/>
+<span class="error" id="zipcodecheck"></span>
 	</td>
 </tr>
 
@@ -437,11 +440,14 @@ Description:hw2 html
                 type="text"
                 name="userid"
                 id="userid"
-                maxlength="20"
+				minlength="5"
+                maxlength="30"
                 required
-                title="Enter a username ID:"
+                title="Enter a username ID, at least 5 characters, cannot begin with a number"
                 placeholder="asdf123"
+				onblur="validateUserid()"
                 />
+			<span class="error" id="useridcheck"></span>
             </td>
         </tr>
 
@@ -458,7 +464,12 @@ Description:hw2 html
 			required
 			title="Enter a password"
 			placeholder="asdf123l"
+			onblur="validatePassword()"
+			oninput="validatePassword()"
+			onfocus="validatePassword()"
 			/>
+	 </br>
+		 <span class="error" id="passwordcheck"></span>
     </td>
 </tr>
 
