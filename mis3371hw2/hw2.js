@@ -174,7 +174,20 @@ function validatePassword() {
     .join("");
 }                                           
 
+function rePassword() {
+    password = document.getElementById("password").value;
+    repassword = document.getElementById("repassword").value;
 
+    if (password1 !== password2) {
+        document.getElementById("repasswordcheck").innerHTML = 
+        "Passwords DON'T MATCH!!";
+        return false;
+    } else {
+        document.getElementById("repasswordcheck").innerHTML = 
+        "Passwords MATCH!!";
+        return true;
+    }
+}
 
 
 
