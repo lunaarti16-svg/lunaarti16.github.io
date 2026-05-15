@@ -459,10 +459,10 @@ Description:hw2 html
 			type="password" 
         	name="password" 
        		id="password" 
-        	minlength="10"
+        	minlength="8"
 			maxlength="30"
 			required
-			title="Enter a password"
+			title= "Passwords must contain at least 1 uppercase, 1 lowercase letter, 1 digit and 1 special character"
 			placeholder="asdf123l"
 			onblur="validatePassword()"
 			oninput="validatePassword()"
@@ -481,7 +481,7 @@ Description:hw2 html
 			type="password" 
         	name="repassword" 
        		id="repassword" 
-        	minlength="10"
+        	minlength="8"
 			maxlength="30"
 			required
 			title="Re-enter your password"
@@ -490,7 +490,7 @@ Description:hw2 html
 			oninput="rePassword()"
 			onfocus="rePassword()"
 			/>
-	 </br>
+	 	</br>
 		 <span class="error" id="repasswordcheck"></span>
     </td>
 </tr>
@@ -500,14 +500,30 @@ Description:hw2 html
         <center>
             <input type="submit" name="submit" id="submit">
             <input type="reset" name="reset" id="reset">
+			<input type="button" name="review" id="review" value="review" 
         </center>
     </td>
 </tr>
-	 </table>
+</table>
 </div>
-</center>
-</form>
 
+<div class="passwordmessage">
+    <span id="msg1"></span> <br/>
+    <span id="msg2"></span> <br/>
+    <span id="msg3"></span> <br/>
+    <span id="msg4"></span> <br/>
+	<span id="msg5"></span> <br/>
+	<span id="msg6"></span> <br/>
+	<span id="msg7"></span> <br/>
+	<span id="repasswordcheck"></span> <br/>
+</div>		 
+
+<center>
+	<p id="showInput"></p>
+</center>
+	 </center>
+
+	 </form>
 		 
 <footer>
     <p id="footer"> &#169 Luna Family Clinic |<a href="https://nafcclinics.org/" target="_blank" rel="noopener noreferrer"> Contact Us!</a></p>
