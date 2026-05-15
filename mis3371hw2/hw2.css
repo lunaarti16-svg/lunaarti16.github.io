@@ -8,7 +8,7 @@ Description:hw2 css
 */
 header {
     width: 100%;
-    background-color: (RGB: 15, 191, 62);
+    background-color: #3094FF;
 }
 body {
     display: flex;
