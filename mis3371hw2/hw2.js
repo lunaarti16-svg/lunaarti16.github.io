@@ -49,7 +49,43 @@ function validateSsn() {
     }
 }
 
+function validateZipcode() {
+    const zipInput = document.getElementById("zipcode");
+    let zip = zipInput.value.replace(/[^\d-]/g, "");
 
+    if (!zip) {
+        document.getElementById("zcodecheck").innerHTML = 
+        "Zipcode is required";
+        return false;
+    }
+
+    if (zip.length > 5) {
+        zip = zip.slice(0, 5) + "-" + zip.slice(5, 9);
+    } else {
+        zip = zip.slice(0, 5);
+    }
+
+    zipInput.value = zip;
+    document.getElementById("zipcodecheck").innerHTML = "";
+    return true;
+}
+function validateEmailaddress() {
+    email = document.getElementById("emailaddress").value;
+    var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (email == "") {
+    document.getElementById("emailaddresscheck").innerHTML =
+    "Email address is required";
+    return false;
+    } else if (!email.match(emailR)) {
+    document.getElementById("emailaddresscheck").innerHTML =
+    "Enter a valid Email address";
+    return false;
+    } else {
+    document.getElementById("emailaddresscheck").innerHTML ="";
+    return true;
+    }
+}
 
 
 
